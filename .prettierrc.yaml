@@ -1,0 +1,35 @@
+# Base settings
+printWidth: 100                   # Maximum line width
+tabWidth: 2                       # Number of spaces per tab
+semi: true                        # Add semicolons at the end of statements
+useTabs: false                    # Use spaces instead of tabs
+singleQuote: true                 # Use single quotes instead of double quotes
+bracketSpacing: true              # Print spaces between brackets in object literals
+trailingComma: all                # Include trailing commas wherever possible
+arrowParens: always               # Always include parentheses around arrow function parameters
+endOfLine: lf                     # Use Unix-style line endings (LF)
+
+# Plugins
+plugins:
+  - '@trivago/prettier-plugin-sort-imports'
+  - 'prettier-plugin-tailwindcss'
+  - prettier-plugin-sql
+
+# @trivago/prettier-plugin-sort-imports
+importOrder:
+  - '^hono'                       # Hono imports
+  - '<THIRD_PARTY_MODULES>'       # Other third-party libraries
+  - '^@/(.*)$'                    # Project-local alias imports (e.g. @/lib)
+  - '^[./]'                       # Relative imports
+importOrderSeparation: false      # Add a blank line between import groups
+importOrderSortSpecifiers: true   # Sort the imported members within import statements
+
+# prettier-plugin-sql
+language: postgresql
+keywordCase: upper
+dataTypeCase: upper
+functionCase: lower
+indentStyle: standard
+logicalOperatorNewline: before
+expressionWidth: 50
+linesBetweenQueries: 1

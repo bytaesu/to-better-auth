@@ -1,0 +1,8 @@
+.expo
+.next
+dist
+apps/**/out
+node_modules
+package-lock.json
+worker-configuration.d.ts
+__archive__
