@@ -1,6 +1,7 @@
 # `Migrate to BETTER-AUTH.`
 
-This repository provides a setup for migrating from other authentication systems to **Better Auth**.  
+This repository provides a setup for migrating from other authentication systems to **Better Auth**.
+
 The code here has been load-tested, but should be treated as an **example** implementation — feel free to adjust it to fit your workflow.
 
 ---
@@ -16,7 +17,7 @@ To minimize data loss during migration, the `admin`, `anonymous`, and `phoneNumb
 BETTER_AUTH_URL=http://localhost:7777
 BETTER_AUTH_SECRET=******
 FROM_DATABASE_URL=****** # Supabase database connection string
-TO_DATABASE_URL=******   # Target Postgres database connection string for migration
+TO_DATABASE_URL=******   # Target Postgres database connection string
 ```
 
 ### 2. Match your Supabase social providers
@@ -69,7 +70,6 @@ You can now extend the auth instance in `/lib/supabase/auth.ts` to own your auth
 
 ## Limitations
 
-Continuous, zero-downtime migrations are not directly supported, as they depend on specific infrastructure setups.  
-This repository serves as a **reference implementation** designed to provide a safe migration flow with minimal data loss and minimal downtime.
+Continuous, zero-downtime migrations are not directly supported, as they depend on specific infrastructure setups. This repository serves as a **reference implementation** designed to provide a safe migration flow with minimal data loss and minimal downtime.
 
 If you encounter any issues during the migration process or need help, please open an issue on this repository.
