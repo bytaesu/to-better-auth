@@ -6,7 +6,7 @@ The code here has been load-tested, but should be treated as an **example** impl
 
 ---
 
-## Supabase -> Better Auth
+## Supabase Auth → Better Auth
 
 All Supabase-related migration logic can be found under `/lib/supabase`.  
 To minimize data loss during migration, the `admin`, `anonymous`, and `phoneNumber` plugins are preconfigured.
