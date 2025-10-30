@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "bun run --hot src/index.ts",
     "format": "prettier --write \"**/*.{ts,tsx,md,mdx,json,jsonc}\"",
-    "migrate:supabase": "pnpm dlx @better-auth/cli migrate --config src/lib/supabase/auth.ts"
+    "migrate:supabase": "pnpm dlx @better-auth/cli migrate --config src/lib/supabase/auth.ts",
+    "migration-script": "bun ./src/lib/migration-script.ts"
   },
   "dependencies": {
     "better-auth": "^1.3.29",
